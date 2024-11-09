@@ -170,6 +170,11 @@ bool sam_compare(const std::vector<sam_int> &first, const std::vector<sam_int> &
 
 void sam_subtract(std::vector<sam_int> &first, const std::vector<sam_int> &second)
 {
+    if(sam_equal(first, second))
+    {
+        first = {0};
+        return;
+    }
     int t;
     t = 0;
 
